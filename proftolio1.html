@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моє портфоліо</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .portfolio-item {
+            display: inline-block;
+            width: 30%;
+            margin: 10px;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .portfolio-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Моє портфоліо</h1>
+</header>
+
+<nav>
+    <a href="#home" onclick="showSection('home')">Головна</a>
+    <a href="#about" onclick="showSection('about')">Про мене</a>
+    <a href="#projects" onclick="showSection('projects')">Проекти</a>
+    <a href="#contact" onclick="showSection('contact')">Контакти</a>
+</nav>
+
+<section id="home">
+    <h2>Головна</h2>
+    <p>Ласкаво просимо на мою сторінку портфоліо. Тут ви знайдете інформацію про мої проекти, навички та досвід.</p>
+</section>
+
+<section id="about" class="hidden">
+    <h2>Про мене</h2>
+    <p>Я веб-розробник, який має досвід у створенні сучасних веб-сайтів та додатків. Моя мета — створювати користувацькі інтерфейси, які зручні, інтуїтивно зрозумілі та естетично привабливі.</p>
+    <img src="https://i.imgur.com/4QiJ3hK.png" alt="Фото">
+</section>
+
+<section id="projects" class="hidden">
+    <h2>Мої проекти</h2>
+    <div class="portfolio-item">
+        <img src="https://i.imgur.com/4QiJ3hK.png" alt="Проект 1">
+        <h3>Проект 1</h3>
+        <p>Опис першого проекту. Це дуже цікавий проект, який я реалізував/ла, працюючи з сучасними технологіями.</p>
+    </div>
+    <div class="portfolio-item">
+        <img src="https://i.imgur.com/4QiJ3hK.png" alt="Проект 2">
+        <h3>Проект 2</h3>
+        <p>Опис другого проекту. Цей проект дозволив мені вивчити нові інструменти та методи розробки.</p>
+    </div>
+    <div class="portfolio-item">
+        <img src="https://i.imgur.com/4QiJ3hK.png" alt="Проект 3">
+        <h3>Проект 3</h3>
+        <p>Опис третього проекту. Тут я застосував свої навички для створення цікавого веб-сайту чи додатку.</p>
+    </div>
+</section>
+
+<section id="contact" class="hidden">
+    <h2>Контакти</h2>
+    <p>Контактна інформація:</p>
+    <p>Email: email@example.com</p>
+    <p>Телефон: +1234567890</p>
+</section>
+
+<footer>
+    <p>© 2025 Моє портфоліо</p>
+</footer>
+
+<script>
+    // Функція для показу та приховування секцій
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            if (section.id === sectionId) {
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
